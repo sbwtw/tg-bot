@@ -1,0 +1,15 @@
+[package]
+name = "tg-bot"
+version = "0.1.0"
+edition = "2018"
+
+[profile.release]
+lto = true
+
+[dependencies]
+teloxide = { version = "*", features = ["auto-send", "macros"] }
+log = "*"
+pretty_env_logger = "*"
+reqwest = { version = "*", features = ["socks"] }
+tokio = { version = "*", features = ["rt-multi-thread", "macros"]}
+tokio-stream = "*"
